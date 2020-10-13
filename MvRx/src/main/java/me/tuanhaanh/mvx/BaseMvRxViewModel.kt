@@ -7,8 +7,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import androidx.lifecycle.ViewModel
-import com.airbnb.mvrx.MvRxStateStore
-import me.tuanhaanh.mvx.*
 import me.tuanhaanh.mvx.MvRxTestOverrides.FORCE_DISABLE_LIFECYCLE_AWARE_OBSERVER
 import io.reactivex.Completable
 import io.reactivex.Observable

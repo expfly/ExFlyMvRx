@@ -1,6 +1,5 @@
 package me.tuanhaanh.mvx
 
-import com.airbnb.mvrx.MvRxStateStore
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 

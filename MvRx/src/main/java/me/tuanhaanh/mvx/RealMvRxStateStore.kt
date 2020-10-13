@@ -1,6 +1,5 @@
 package me.tuanhaanh.mvx
 
-import com.airbnb.mvrx.MvRxStateStore
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable

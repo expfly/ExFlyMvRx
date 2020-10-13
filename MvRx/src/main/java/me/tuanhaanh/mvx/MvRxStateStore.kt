@@ -1,4 +1,4 @@
-package com.airbnb.mvrx
+package me.tuanhaanh.mvx
 
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
