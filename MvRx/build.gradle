@@ -1,0 +1,49 @@
+import me.tuanhaanh.mvrx.JacocoReportTask
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
+apply plugin: "jacoco"
+apply plugin: "com.vanniktech.maven.publish"
+
+android {
+    resourcePrefix "mvrx_"
+
+    defaultConfig {
+        consumerProguardFiles "proguard-rules.pro"
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                jacoco {
+                    includeNoLocationClasses = true
+                }
+            }
+        }
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.2"
+}
+
+dependencies {
+    kapt AnnotationProcessors.lifecycle
+
+    api Libraries.rxAndroid
+    api Libraries.rxJava
+
+    implementation Libraries.appcompat
+    implementation Libraries.lifecycleCommon
+
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.mockito
+    testImplementation TestLibraries.roboeletric
+}
+
+tasks.register("coverage", JacocoReportTask.class) {
+    coverage.dependsOn("testDebugUnitTest")
+}

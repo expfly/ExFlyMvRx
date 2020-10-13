@@ -1,0 +1,3 @@
+include ':MvRx'
+include ':sample'
+rootProject.name = "MvRxSample"

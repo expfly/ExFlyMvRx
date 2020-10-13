@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+
+android {
+
+    defaultConfig {
+        applicationId "me.tuanhaanh.mvrxsample"
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    kapt AnnotationProcessors.epoxy
+    kapt AnnotationProcessors.moshi
+
+    implementation Libraries.appcompat
+    implementation Libraries.constraintlayout
+    implementation (Libraries.epoxy) { exclude group: "com.android.support" }
+    implementation Libraries.koin
+    implementation Libraries.lifecycleCommon
+    implementation Libraries.moshi
+    implementation Libraries.moshiKotlin
+    implementation Libraries.multiDex
+    implementation Libraries.navigationFragmentKtx
+    implementation Libraries.navigationUiKtx
+    implementation Libraries.recyclerview
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitMoshi
+    implementation Libraries.retrofitRxJava
+    implementation Libraries.rxAndroid
+    implementation Libraries.rxJava
+    implementation project(':MvRx')
+
+    testImplementation TestLibraries.junit
+
+}
