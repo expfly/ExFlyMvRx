@@ -1,7 +1,8 @@
-package me.tuanhaanh.mvrxsample
+package me.tuanhaanh.sample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import me.tuanhaanh.sample.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -6,7 +6,7 @@ apply plugin: "kotlin-kapt"
 android {
 
     defaultConfig {
-        applicationId "me.tuanhaanh.mvrxsample"
+        applicationId "me.tuanhaanh.sample"
         multiDexEnabled true
         versionCode 1
         versionName "1.0.0"
